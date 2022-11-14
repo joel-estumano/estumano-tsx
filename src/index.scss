@@ -1,0 +1,111 @@
+/* import "bootstrap/dist/css/bootstrap.min.css" ;  
+import "bootstrap/dist/js/bootstrap.bundle.min" ; */
+
+* {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    //
+    letter-spacing: 0.8px;
+}
+
+$primary__: #a98b60 !default;
+$success__: #007d00 !default;
+$warning__: #cb4b16 !default;
+$dark__: #18191a !default;
+$light__: #242624 !default;
+$white__: #ffffff !default;
+//bootstrap
+$primary: $primary__ !default;
+$success: $success__ !default;
+$warning: $warning__ !default;
+$dark: $dark__ !default;
+$light: $light__ !default;
+//
+$body-bg: $dark__ !default;
+$body-color: $white__ !default;
+//
+$border-radius: 0.3rem !default;
+//
+$btn-border-radius: $border-radius !default;
+$btn-border-radius-sm: $border-radius !default;
+$btn-border-radius-lg: $border-radius !default;
+//
+
+/* $btn-line-height:             1.5rem !default;
+$input-btn-padding-y:         .75rem !default;
+$input-btn-padding-x:         1.5rem !default;
+$input-btn-padding-y-sm:      .5rem !default;
+$input-btn-padding-x-sm:      1rem !default;
+$input-btn-padding-y-lg:      2rem !default;
+$input-btn-padding-x-lg:      2rem !default;
+$btn-font-weight:             600 !default;
+$input-line-height:                     1.5 !default;
+$input-border-radius: $border-radius !default;
+$input-border-radius-sm: $border-radius !default;
+$input-border-radius-lg: $border-radius !default; */
+
+$btn-line-height: 1rem !default;
+$input-btn-padding-y: 0.75rem !default;
+$input-btn-padding-x: 1rem !default;
+$input-btn-padding-y-sm: 0.5rem !default;
+$input-btn-padding-x-sm: 1rem !default;
+$input-btn-padding-y-lg: 2rem !default;
+$input-btn-padding-x-lg: 2rem !default;
+$btn-font-weight: 600 !default;
+$input-line-height: 1.5 !default;
+$input-border-radius: $border-radius !default;
+$input-border-radius-sm: $border-radius !default;
+$input-border-radius-lg: $border-radius !default;
+$input-bg: $light !default;
+$input-disabled-bg: $light !default;
+//
+$box-shadow: 0 0.5rem 1rem rgba($primary, 0.15) !default;
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($primary, 0.075) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($primary, 0.175) !default;
+$box-shadow-inset: inset 0 1px 2px rgba($primary, 0.075) !default;
+//
+$modal-content-border-radius: 0 !default;
+.modal-content {
+    border: none !important;
+}
+
+.modal-backdrop {
+    --bs-backdrop-bg: transparent !important;
+    background-color: var(--bs-backdrop-bg);
+}
+
+//correção necessária
+.is-invalid {
+    --bs-bg-opacity: 0.1;
+    background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+}
+
+// Source mixin
+@mixin make-container($padding-x: 12vw) {
+    width: 100%;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Usage
+.container-ref {
+    @include make-container();
+}
+
+.container-ref {
+    padding: 0 12vw 0 12vw;
+}
+
+@media screen and (max-width: 769px) {
+    .container-ref {
+        padding: 0 4vw 0 4vw;
+    }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
