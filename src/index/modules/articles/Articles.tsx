@@ -1,5 +1,7 @@
-export function Articles(){
+export function Articles() {
     return (
-        <p>Articles</p>
+        <div className="container-ref d-flex min-vh-100">
+            <p>Articles</p>
+        </div>
     )
 }

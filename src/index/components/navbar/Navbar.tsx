@@ -15,10 +15,10 @@ export function Navbar() {
             <div className="nav-component-bar">
                 <nav className="nav-ref navbar navbar-expand-lg sticky-top">
                     <div className="container-ref container space-between text-uppercase">
-                        <a className="navbar-brand d-flex justify-content-center align-items-center text-white">
+                        <NavLink to="/" className="navbar-brand d-flex justify-content-center align-items-center text-white">
                             <img className="me-1" src={reactLogo} alt="Logo" width="32" height="32" />
                             <span>Estumano</span>
-                        </a>
+                        </NavLink>
                         <button className="navbar-toggler border-0 text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="material-symbols-outlined">menu</span>
                         </button>
