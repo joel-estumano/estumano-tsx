@@ -1,12 +1,13 @@
 import './Navbar.scss';
 import reactLogo from '../../../assets/react.svg';
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export function Navbar() {
 
-    const [routerLinks, setRouterLinks] = useState<string[]>([
-        'Artigos',
-        'ferramentas e utilitários'
+    const [routerLinks, setRouterLinks] = useState<any[]>([
+        { routerLink: 'articles', label: 'Artigos', allowed: true },
+        { routerLink: 'tools-and-utils', label: 'ferramentas e utilitários', allowed: true },
     ])
 
     return (
@@ -26,11 +27,11 @@ export function Navbar() {
                                 <ul className="navbar-nav me-auto mb-0 mb-lg-0 w-100 justify-content-end">
                                     {
                                         React.Children.toArray(
-                                            routerLinks.map((routerLink) =>
+                                            routerLinks.map((RL) =>
                                                 <li className="nav-item">
-                                                    <a className="nav-link d-flex justify-content-start align-items-center text-decoration-none text-white" style={{ padding: '8px 16px' }}>
-                                                        <span className="text-uppercase" style={{ fontSize: '12px', cursor: 'pointer' }}> {routerLink} </span>
-                                                    </a>
+                                                    <NavLink to={`${RL.routerLink}`} className="nav-link d-flex justify-content-start align-items-center text-decoration-none text-white" style={{ padding: '8px 16px' }}>
+                                                        <span className="text-uppercase" style={{ fontSize: '12px', cursor: 'pointer' }}> {RL.label} </span>
+                                                    </NavLink>
                                                 </li>
                                             )
                                         )

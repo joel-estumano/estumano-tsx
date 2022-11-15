@@ -1,11 +1,11 @@
-import { Navbar } from './index/components/navbar/Navbar'
+import { AppRoutes } from './AppRoutes';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-    </div> 
-  )
+      <AppRoutes/>
+    </div>
+  );
 }
 
 export default App
